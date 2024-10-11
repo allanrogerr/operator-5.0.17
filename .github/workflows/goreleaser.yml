@@ -10,7 +10,7 @@ on:
 jobs:
   goreleaser-operator:
     timeout-minutes: 30
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -31,7 +31,7 @@ jobs:
           args: release --skip=publish --clean --snapshot
   goreleaser-operator-sidecar:
     timeout-minutes: 30
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Checkout
         uses: actions/checkout@v3
